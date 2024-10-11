@@ -2,7 +2,7 @@ import socket
 
 # Try this with example.com first, but try changing it to a different site after
 # you get it working.
-hostname = "example.com"
+hostname = "www.google.com"
 
 
 # Do not modify this function
@@ -32,7 +32,8 @@ def make_http_request(ip, port):
 
 # Firstly, find the function to return an ip address from whatever the hostname is
 # (This variable is defined at the top of this file if you want to play with it)
-#
+ip_address = socket.gethostbyname(hostname)
+print(make_http_request(ip_address, 80))
 # Hint: This is meant for you to use Google to figure out.
 
 # Next, call make_http_request with the correct parameters and then print the response
